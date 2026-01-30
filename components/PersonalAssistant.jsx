@@ -189,19 +189,19 @@ function PersonalAssistantApp() {
     }
   };
 
-  const syncGoogleCalendar = () => {
+const syncGoogleCalendar = () => {
     const clientId = '250199524031-8ligib7od5kta7cemofs1bv6iv2kkuk3.apps.googleusercontent.com';
-    const redirectUri = 'https://oauth-redirect.googleusercontent.com/r/YOUR_PROJECT_ID';
+    const redirectUri = 'https://personal-assistant-ssye.vercel.app';
     const scope = 'https://www.googleapis.com/auth/calendar.readonly';
     
-    // Create authorization URL
     const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?` +
       `client_id=${clientId}&` +
       `redirect_uri=${encodeURIComponent(redirectUri)}&` +
       `response_type=token&` +
-      `scope=${encodeURIComponent(scope)}&` +
-      `include_granted_scopes=true&` +
-      `state=pass-through-value`;
+      `scope=${encodeURIComponent(scope)}`;
+    
+    window.location.href = authUrl;
+  };
     
     // Show instructions
     const instructions = `
