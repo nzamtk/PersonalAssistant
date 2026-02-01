@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     }
 
     // Gemini APIのエンドポイント
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
+    const apiUrl = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${apiKey}`;
 
     // メッセージを整形（最新10件のみ）
     const recentMessages = messages.slice(-10);
